@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 ログ・テンプレート ｜ iChoosr 運用ガイドライン</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Google スプレッドシートでブランド議論ログを蓄積するためのシンプルな表テンプレート。">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="03 ログ・テンプレート ｜ iChoosr 運用">
+<meta property="og:description" content="Google スプレッドシートで議論ログを蓄積するためのシンプルなテンプレート。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">iChoosr Brand Guidelines <span>Japan Edition</span></div>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../guidelines/01-mission-vision.html">Guidelines</a>
+    <a href="00-governance.html" class="active">Operations</a>
+  </nav>
+</header>
+
+<div class="wip-banner">
+  ⚠ <strong>作業中・最終納品物ではありません</strong> — このサイトは議論用のプロトタイプです。記載内容は逐次更新されます。
+</div>
+
+<main>
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a><span class="sep">›</span>
+    <a href="00-governance.html">Operations</a><span class="sep">›</span>
+    03 ログ・テンプレート
+  </div>
+
+  <div class="page-title">
+    <span class="label-en">Operations 03</span>
+    <h1>ログ・テンプレート</h1>
+  </div>
+  <p class="page-subtitle">Google スプレッドシート1枚で運用する、シンプルな議論ログ。before/after の実例集ではなく、自分たちで蓄積していく型を示す。</p>
+
+
+  <h2 class="section-h">スプレッドシートの構成（6列）</h2>
+
+  <p style="margin-bottom: 8px;">月1回のブランドタスクフォースで議論したアウトプットを、以下の6列で1行ずつ追記していく。</p>
+
+  <div class="sheet-wrap">
+    <div class="sheet-toolbar">iChoosr ブランド議論ログ — Google Sheets</div>
+    <table class="sheet-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="col-letter">A</span>ドキュメントタイプ</th>
+          <th><span class="col-letter">B</span>起票日</th>
+          <th><span class="col-letter">C</span>起票者</th>
+          <th><span class="col-letter">D</span>before</th>
+          <th><span class="col-letter">E</span>after</th>
+          <th><span class="col-letter">F</span>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="sample">
+          <td class="row-num">1</td>
+          <td><span class="tag-doc">LP</span></td>
+          <td>2026-06-03</td>
+          <td>〇〇</td>
+          <td>今すぐ登録！期間限定の特典をお見逃しなく！</td>
+          <td>まずは概算見積もりだけでも。参加登録は決定ではありません。</td>
+          <td>「今すぐ」「お見逃しなく」が煽りに該当。CV を急がない姿勢を貫く。</td>
+        </tr>
+        <tr class="sample">
+          <td class="row-num">2</td>
+          <td><span class="tag-doc">チラシ</span></td>
+          <td>2026-06-05</td>
+          <td>△△</td>
+          <td>〇〇市公認！太陽光導入を強力推進中。</td>
+          <td>お住まいの〇〇市と一緒に進めている取り組みです。</td>
+          <td>「公認」「推進」は期待値を過剰に上げる。「一緒に」が日本版の方針。</td>
+        </tr>
+        <tr class="sample">
+          <td class="row-num">3</td>
+          <td><span class="tag-doc">メール</span></td>
+          <td>2026-06-10</td>
+          <td>□□</td>
+          <td>4kWの太陽光パネルで年間4,000kWhの発電が見込めます。</td>
+          <td>4kWの太陽光パネル（パネル10枚ほど）で、年間およそ4,000kWh — ご家庭の電気代に換算すると月々8,000円分ほどの発電が見込めます。</td>
+          <td>kWh は生活者の感覚から遠い。「枚数」「電気代換算」を併記。</td>
+        </tr>
+        <tr class="empty">
+          <td class="row-num">4</td>
+          <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <h2 class="section-h">各列の運用ルール</h2>
+
+  <div class="rationale-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div>
+      <h4>A｜ドキュメントタイプ</h4>
+      <p>LP / チラシ / メール / SNS / 動画 / その他<br>プルダウン推奨</p>
+    </div>
+    <div>
+      <h4>B｜起票日</h4>
+      <p>議論した日（YYYY-MM-DD）</p>
+    </div>
+    <div>
+      <h4>C｜起票者</h4>
+      <p>持ち寄った担当者の名前</p>
+    </div>
+    <div>
+      <h4>D｜before</h4>
+      <p>元の文面（修正前のコピー）</p>
+    </div>
+    <div>
+      <h4>E｜after</h4>
+      <p>議論を経た修正後の文面</p>
+    </div>
+    <div>
+      <h4>F｜理由</h4>
+      <p>なぜそう変えたか（ガイドラインの何と照らして判断したか）</p>
+    </div>
+  </div>
+
+
+  <h2 class="section-h">運用のコツ</h2>
+
+  <div class="checklist">
+    <ul>
+      <li><strong>1行＝1議論</strong>。修正パターンが複数あるアウトプットでも、観点ごとに行を分けると後で見返しやすい。</li>
+      <li><strong>「F 理由」は短くてOK</strong>。何のガイドライン項目に照らしたか（Personality / ToV / KMH 等）が分かれば十分。</li>
+      <li><strong>フィルタ機能を活用</strong>。Aドキュメントタイプ別 / C起票者別 で絞れるようにしておくと、四半期レビューでパターンを抽出しやすい。</li>
+      <li><strong>四半期レビュー時</strong>は、このシートを AI にコピペして読み込ませ、「繰り返し出てくる修正パターン」を整理するのも有効。</li>
+    </ul>
+  </div>
+
+
+  <div class="callout">
+    <strong>運用開始のヒント：</strong> Google スプレッドシートで上記6列のシートを作成 → 1行目をヘッダー（タイトル＋プルダウン設定）→ タスクフォース参加者全員に編集権限を付与 → 月次でファシリテーターが内容を整える。これだけで始められる。
+  </div>
+
+
+  <nav class="page-nav">
+    <a href="02-checklist.html" class="prev">
+      <div class="dir">← PREV</div>
+      <div class="title">02 レビュー観点</div>
+    </a>
+    <a href="../guidelines/01-mission-vision.html" class="next">
+      <div class="dir">END →</div>
+      <div class="title">Guidelinesへ戻る</div>
+    </a>
+  </nav>
+
+</div>
+</main>
+
+<footer>
+  <div>iChoosr Japan ｜ Brand Guidelines</div>
+  <div class="meta">Last updated 2026-05-25 — 軽部MTG反映版</div>
+</footer>
+
+</body>
+</html>
