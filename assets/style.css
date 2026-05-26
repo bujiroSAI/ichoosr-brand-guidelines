@@ -1037,3 +1037,177 @@ footer .meta { margin-top: 8px; color: rgba(255,255,255,0.5); }
   .sheet-wrap { overflow-x: auto; }
   .sheet-table { min-width: 720px; }
 }
+
+/* ============ Policy cards (方針カード並列) ============ */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 20px 0 8px;
+}
+.policy-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--amber);
+}
+.policy-card.structure { border-top-color: var(--deep); }
+.policy-card.translation { border-top-color: var(--mid); }
+.policy-card.operation { border-top-color: var(--soft); }
+.policy-card.consensus { border-top-color: var(--amber); }
+.policy-card .axis {
+  font-family: var(--font-en);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+.policy-card.structure .axis { color: var(--deep); }
+.policy-card.translation .axis { color: var(--mid); }
+.policy-card.operation .axis { color: var(--soft); }
+.policy-card.consensus .axis { color: var(--amber); }
+.policy-card h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.policy-card p {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.policy-card p:last-child { margin-bottom: 0; }
+.policy-card ul {
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+/* ============ References block (参照元) ============ */
+.refs {
+  background: #F8F8F5;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+  border: 1px solid var(--line);
+}
+.refs > .refs-title {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+.refs > .refs-title::before {
+  content: "📄";
+  margin-right: 6px;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+.ref-group {
+  margin-top: 16px;
+}
+.ref-group:first-of-type { margin-top: 0; }
+.ref-group .group-head {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--line);
+}
+.ref-group .group-head .src {
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--gray);
+  margin-left: 8px;
+  letter-spacing: 0.05em;
+}
+.ref-group ul {
+  list-style: none;
+  padding: 0;
+}
+.ref-group li {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink);
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+.ref-group li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--gray-light);
+}
+.ref-group li.attr {
+  color: var(--gray);
+  font-style: italic;
+  font-size: 12px;
+  padding-left: 14px;
+}
+.ref-group li.attr::before {
+  content: "—";
+}
+
+/* ============ Option cards (複数案) ============ */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.option-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  border-left: 4px solid var(--mid);
+  box-shadow: var(--shadow);
+}
+.option-card .opt-num {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: var(--tint);
+  color: var(--deep);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.option-card .opt-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.option-card .opt-en {
+  font-family: var(--font-en);
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+.option-card .opt-desc {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.option-card.recommended {
+  border-left-color: var(--amber);
+  background: linear-gradient(135deg, var(--paper) 0%, var(--amber-soft) 100%);
+}
+.option-card.recommended .opt-num {
+  background: var(--amber);
+  color: #fff;
+}
