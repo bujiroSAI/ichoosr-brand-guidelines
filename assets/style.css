@@ -1211,3 +1211,149 @@ footer .meta { margin-top: 8px; color: rgba(255,255,255,0.5); }
   background: var(--amber);
   color: #fff;
 }
+
+/* ============ Translation alternatives (3-level × N cards) ============ */
+.alt-section {
+  margin: 40px 0;
+}
+.alt-level {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.alt-level-header {
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 2px solid var(--line);
+}
+.alt-level.lv1 .alt-level-header { background: linear-gradient(90deg, #F0F1ED 0%, #FAFAF6 100%); border-bottom-color: var(--gray-light); }
+.alt-level.lv2 .alt-level-header { background: linear-gradient(90deg, var(--tint) 0%, #FFF 100%); border-bottom-color: var(--soft); }
+.alt-level.lv3 .alt-level-header { background: linear-gradient(90deg, var(--amber-soft) 0%, #FFFCF3 100%); border-bottom-color: var(--amber); }
+.alt-level .lv-badge {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+.alt-level.lv1 .lv-badge { background: var(--gray); }
+.alt-level.lv2 .lv-badge { background: var(--mid); }
+.alt-level.lv3 .lv-badge { background: var(--amber); }
+.alt-level .lv-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--deep);
+}
+.alt-level .lv-desc {
+  font-size: 13px;
+  color: var(--gray);
+  margin-left: auto;
+}
+@media (max-width: 720px) {
+  .alt-level .lv-desc { display: none; }
+}
+.alt-cards {
+  padding: 20px 24px;
+}
+.alt-card {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.alt-card:last-child { border-bottom: none; }
+.alt-card .num {
+  font-family: var(--font-en);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mid);
+  text-align: center;
+  padding-top: 2px;
+}
+.alt-level.lv1 .alt-card .num { color: var(--gray); }
+.alt-level.lv3 .alt-card .num { color: var(--amber); }
+.alt-card .body .text {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.alt-card .body .text strong { color: var(--deep); }
+.alt-card .body .aim {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--gray);
+  font-style: italic;
+}
+.alt-card .body .aim::before {
+  content: "狙い：";
+  font-style: normal;
+  color: var(--mid);
+  font-weight: 700;
+}
+.alt-level.lv1 .alt-card .body .aim::before { color: var(--gray); }
+.alt-level.lv3 .alt-card .body .aim::before { color: var(--amber); }
+
+/* Gradient story-level */
+.story-grade {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--soft);
+}
+.story-grade.lv1 { border-left-color: var(--gray-light); background: #FBFBF8; }
+.story-grade.lv2 { border-left-color: var(--soft); }
+.story-grade.lv3 { border-left-color: var(--amber); background: linear-gradient(135deg, var(--paper) 0%, var(--amber-soft) 100%); }
+.story-grade .grade-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.story-grade .grade-head .lv-badge {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+.story-grade.lv1 .lv-badge { background: var(--gray); }
+.story-grade.lv2 .lv-badge { background: var(--mid); }
+.story-grade.lv3 .lv-badge { background: var(--amber); }
+.story-grade .grade-head .label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--deep);
+}
+.story-grade .grade-body {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink);
+}
+.story-grade .grade-body p { margin-bottom: 10px; }
+.story-grade .aim {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-size: 12.5px;
+  color: var(--gray);
+  font-style: italic;
+}
+.story-grade .aim::before {
+  content: "狙い：";
+  font-style: normal;
+  color: var(--mid);
+  font-weight: 700;
+}
